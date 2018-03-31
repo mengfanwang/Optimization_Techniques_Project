@@ -1,4 +1,6 @@
 \relax 
+\citation{sift}
+\citation{hog}
 \citation{dataset}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Data Collection}{1}}
@@ -6,17 +8,26 @@
 \newlabel{image}{{1}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Methods}{1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Weak Classifier based on SIFT}{1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The average percentage of each dimension's component of the sheep class. }}{1}}
-\newlabel{pca}{{2}{1}}
 \citation{proving}
 \citation{knn}
 \citation{ova}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  The flow chart of the weak classifier based on SIFT algorithm. }}{2}}
-\bibcite{dataset}{1}
-\bibcite{proving}{2}
-\bibcite{knn}{3}
-\bibcite{ova}{4}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Model Evaluation}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Future Work}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{3}}
-\@writefile{toc}{\contentsline {section}{References}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The average percentage of each dimension's component of the sheep class. }}{2}}
+\newlabel{pca}{{2}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  The flow chart of the weak classifier based on SIFT algorithm. SIFT features extracted from images will be reduced to 40 dimensions firstly, then put together to construct the bag of words model. After that, use K-means to cluster these feature points and count, proposing to convert feature points to histogram vectors. The final step is building the OVA SVM model. }}{2}}
+\newlabel{sift}{{3}{2}}
+\citation{ada}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Combining different features by AdaBoost}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  The flow chart of the whole algorithm. From the dataset three kinds of features can be extracted. Based on these features, OVA SVM models are built separately. Finally, these models are combined by AdaBoost. }}{3}}
+\newlabel{all}{{4}{3}}
+\bibcite{sift}{1}
+\bibcite{hog}{2}
+\bibcite{lbp}{3}
+\bibcite{dataset}{4}
+\bibcite{proving}{5}
+\bibcite{knn}{6}
+\bibcite{ova}{7}
+\bibcite{ada}{8}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Model Evaluation}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}algorithm}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{4}}
+\@writefile{toc}{\contentsline {section}{References}{4}}
