@@ -1,5 +1,4 @@
-clc;clear;
-Iter_CrossVal = 3;
+function [SVM_Struct, Features, TrainningResult, TestResult, TrainningSet, TestSet] = Classifier_LBP(Iter_CrossVal)
 
 %import data
 Animals = {'dolphin','giraffe','rabbit','sheep'};
@@ -26,11 +25,12 @@ Label = [ones(720,1);2*ones(720,1);3*ones(720,1);4*ones(720,1);];
 
 % SVM
 SVM_Struct = fitcecoc(TrainningSet,Label,'Coding','onevsall');
-Result = predict(SVM_Struct,TestSet);
+TrainningResult = predict(SVM_Struct,TrainningSet);
+TestResult = predict(SVM_Struct,TestSet);
 ResultLabel = [ones(180,1);2*ones(180,1);3*ones(180,1);4*ones(180,1);];
-temp = (Result==ResultLabel);
-Accuracy = sum(Result==ResultLabel)/720;
-sum(temp(1:180))/180
-sum(temp(181:360))/180
-sum(temp(361:540))/180
-sum(temp(541:720))/180
+temp = (TestResult==ResultLabel);
+Accuracy = sum(TestResult==ResultLabel)/720
+% sum(temp(1:180))/180
+% sum(temp(181:360))/180
+% sum(temp(361:540))/180
+% sum(temp(541:720))/180
